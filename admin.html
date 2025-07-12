@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin section</title>
+    <link rel="stylesheet" href="walmart.css">
+</head>
+<body>
+    
+    <h1 id="Spoilageheadig">Inventory Spoilage Risk Dashboard</h1>
+
+    <div class="list">
+        <div class="sfeature">
+            <button type="submit" id="addsitem">Add Item</button>
+            <input type="search"  id="Spoilageserach" placeholder="search risk item">
+            <button type="submit" id="spsearch">Search</button>
+        </div>
+  
+       <form class="useritem" id="userForm">
+    <label for="item">Item</label>
+    <input type="text" name="itembyuser" id="item" required>
+
+    <label for="stockbyuser">Stock</label>
+    <input type="text" name="stockbyuser" id="stockbyuser" required>
+
+    <label for="sale">Sale</label>
+    <input type="text" name="salebyuser" id="sale" required>
+
+    <label for="expiry">Expiry</label>
+    <input type="text" name="Expirybyuser" id="expiry" required>
+
+    <label for="risk">Risk Score</label>
+    <input type="text" name="riskbyuser" id="risk" required>
+
+    <label for="risklevelbyuser">Risk level</label>
+    <input type="text" name="rlevel" id="risklevelbyuser" required>
+
+    <button type="submit">Done</button>
+</form>
+
+
+        <div>
+            <table id="Spoilagetbl">
+                <tr style="border: 1px solid black;">
+                    <th id="stblheading">Item</th>
+                    <th id="stblheading">Stock</th>
+                    <th id="stblheading">Sale</th>
+                    <th id="stblheading">Expiry</th>
+                    <th id="stblheading">Risk Score</th>
+                    <th id="stblheading">Risk level</th>
+
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td>Tomato</td>
+                    <td>120</td>
+                    <td>100</td>
+                    <td>1-07-2025</td>
+                    <td>0,12</td>
+                    <td id="risklevel">Low</td>
+                </tr>
+                <tr style="border: 1px solid black;">
+                    <td>Apple</td>
+                    <td>180</td>
+                    <td>80</td>
+                    <td>15-07-2025</td>
+                    <td>0,50</td>
+                    <td id="risklevel">Low</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+ <script src="add.js"></script>
+</body>
+</html>

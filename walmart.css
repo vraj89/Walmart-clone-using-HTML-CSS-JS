@@ -1,0 +1,808 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    
+    
+}
+/* *, *::before, *::after {
+  box-sizing: border-box;
+} */
+
+:root{
+   --background-color:blue;
+   --secondbackground-color: rgb(133, 171, 249);
+   --color: white;
+   --hoverbackground-color: #007ACC;
+   --sustainabilitybackground-color: lightgreen;
+   --stockbackground-color:orange;
+
+    --layer-searchbar: 900;
+    --layer-nav: 800;
+    --layer-hero: 700;
+    --layer-sale: 600;
+    --layer-flash: 500;
+    --layer-default: 100;
+
+}
+
+.searchbar {
+    position: fixed;
+    top: 0;
+    z-index: var(--layer-searchbar);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    height: 4.375rem;
+    width: 100%;
+    max-width: 100vw;
+    padding: 0.2rem;
+    box-sizing: border-box;
+   
+}
+#walmartlogo{
+
+    height: 3.5rem;
+    max-height: 8vh;
+    border-radius: 50%;
+}
+.pickupdelivery{
+    width: 16rem;
+    background-color: var(--background-color);
+    color: var(--color);
+    gap: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#pickuptxt{
+    font-size: 1rem;
+    font-weight: bold;
+}
+#pdropdown{
+    width: 1rem;
+    height: 1rem;
+   
+}
+.pickupdelivery:hover
+{
+    background-color: var(--hoverbackground-color);
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all transform 0.3s ease;
+    border-radius: 10px;
+}
+.actualserach{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+#usersearch{
+
+    width: 38rem;
+    max-width: 80vw;
+    height: 3rem;
+    border-radius: 20px;
+}
+#searchBtn{
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--background-color);
+    color: var(--color);
+    padding: 0.5rem;
+    border: 1px solid white;
+  border-radius: 50%;
+    
+}
+
+#searchBtn:hover{
+
+    background-color: var(--hoverbackground-color);
+}
+
+.sign{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   
+  
+}
+#signinBtn {
+    color: white;
+    padding: 1rem;
+   font-size: 1rem;
+   font-weight: bold;
+    border-radius: 10px;
+}
+#signinBtn:hover{
+    background-color: var(--hoverbackground-color);
+}
+#cartfig {
+  text-align: center;
+  background-color: var(--background-color);
+  color: var(--color);
+}
+
+#cartimg{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.navsection {
+    position: fixed;
+    top: 4.375rem; /* directly below searchbar */
+    z-index: var(--layer-nav);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    width: 100%;
+    background-color: var(--secondbackground-color);
+}
+.Dept{
+    background-color: var(--secondbackground-color);
+    position: fixed;
+ 
+}
+.Dept:hover{
+   
+    cursor: pointer;
+  
+}
+.Deptdrop {
+  display: none;
+  position: absolute;
+  top: 100%; /* Drop just below the parent */
+  left: 0;
+  width: 5rem;
+  z-index: 10; /* Ensure it’s above other elements */
+  padding: 1rem;
+  /* border-radius: 10px; */
+}
+
+#admin{
+
+     font-size: 1rem;
+    color:black;
+   
+}
+.herosection {
+    position: relative; /* change from absolute to relative to flow naturally */
+    z-index: var(--layer-hero);
+    margin-top: calc(4.375rem + 3rem); /* searchbar + navsection */
+    width: 100%;
+    background-color: var(--sustainabilitybackground-color);
+}
+
+
+#sustabilitytitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+.sectionimages{
+    display: block;
+    max-width: 60%;
+    margin-left: 20%;
+    height: auto;
+}
+#sustainableimg{
+
+        width: 100%;
+        height: 20rem;
+}
+#seemoresustainability
+{
+    width: 8rem;
+    height: 3rem;
+    position: absolute;
+    bottom: 60%;
+    left: 20%;
+    padding: 1rem;
+    background-color: var(--color);
+    color: blue;
+    border-radius: 10px;
+}
+#seemoresustainability:hover{
+   
+    transform: scale(1.1);
+    transition: all  0.3s ease;
+    cursor: pointer;
+    background-color: var(--secondbackground-color);
+}
+.summersale{
+   display: none;
+    width: 100%;
+    height: auto;
+
+}
+
+#saleimg{
+    width: 60%;
+    margin-left: 20%;
+    height: 20rem;
+
+}
+
+#saleheading{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#salesee{
+    
+    position: absolute;
+    bottom: 60%;
+    left: 21%;
+    width: 7rem;
+    height: 3rem;
+    padding: 1rem;
+   border-radius: 10px;
+    color: var(--background-color);
+    background-color: var(--color);
+}
+#salesee:hover{
+    transform: scale(1.2);
+    transition: all;
+    background-color: var(--secondbackground-color);
+}
+.prevnex{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   gap: 2rem;
+
+}
+#prev{
+    border-radius: 50%;
+    background-color: var(--color);
+    padding: 0.6rem;
+}
+#next{
+     border-radius: 50%;
+    background-color: var(--color);
+    padding: 0.6rem;
+}
+#prev:hover{
+    background-color: var(--secondbackground-color);
+    cursor: pointer;
+}
+#next:hover{
+    background-color: var(--secondbackground-color);
+    cursor: pointer;
+}
+.flashdeals{
+    position: relative;
+    z-index: var(--layer-flash);
+  
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+
+    gap: 1rem;
+}
+#flashheading{
+    display: block;
+}
+.watch{
+
+    width: 10rem;
+    height: 25rem;
+    /* border: 1px solid black;
+    border-radius: 10px; */
+
+}
+#smartwatchimg{
+   display: flex;
+   flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    width: 10rem;
+}
+#price{
+    color: green;
+    font-size: 1rem;
+    padding: 0.5rem;
+    font-weight: bolder;
+}
+#stock{
+    width: 5rem;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: var(--stockbackground-color);
+    color: var(--color);
+    padding: 0.3rem;
+    margin: 0.2rem;
+}
+#cart{
+    width: 5rem;
+    height: 2rem;
+    padding: 0.3rem;
+    margin: 0.2rem;
+    background-color: var(--background-color);
+    color: var(--color);
+    border-radius: 10px;
+}
+#cart:hover{
+    transition: all;
+    transform: scale(1.1);
+    background-color: var(--secondbackground-color);
+    cursor: pointer;
+}
+.iphone{
+
+    width: 10rem;
+    height: 25rem;
+
+}
+#iphoneimg{
+    height: 10rem;
+    width: 10rem;
+}
+.headphones{
+     width: 10rem;
+    height: 25rem;
+}
+#JBLheadphone{
+    height: 10rem;
+    width: 10rem;
+}
+#outofstock{
+    width: 6rem;
+    height: 2rem;
+    color: var(--color);
+    background-color:red;
+    border-radius: 10px;
+    padding: 0.2rem;
+}
+.ipad{
+    width: 10rem;
+    height: 25rem;
+}
+#ipadimg{
+    width: 10rem;
+    height: 10rem;
+}
+.speaker{
+    width: 10rem;
+    height: 25rem;
+}
+#jblspeaker{
+      width: 10rem;
+    height: 10rem;
+}
+.portablecharger{
+    width: 10rem;
+    height: 25rem;
+
+}
+#portable{
+    width: 10rem;
+    height: 10rem;
+}
+.windowAC{
+    width: 10rem;
+    height: 25rem;
+}
+#acimg{
+    width: 10rem;
+    height: 10rem;
+}
+.bicycle{
+    width: 15rem;
+    height: 25rem;
+}
+#bicycleimg{
+    width: 15rem;
+    height: 10rem;
+}
+.homedecores{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.led{
+    width: 10rem;
+    height: 25rem;
+}
+#ledimg{
+    width: 10rem;
+    height: 10rem;
+    
+}
+.aiplants{
+    width: 10rem;
+    height: 25rem;
+
+}
+#aiplantsimg{
+    width: 10rem;
+    height: 10rem;
+}
+.bulbstring{
+    width: 10rem;
+    height: 25rem;
+}
+#bulbseries{
+    width: 10rem;
+    height: 10rem;
+}
+.wallart{
+    width: 10rem;
+    height: 25rem;
+}
+#wallimg{
+    width: 10rem;
+    height: 10rem;
+}
+.carpet{
+    width: 10rem;
+    height: 25rem;
+}
+#carpetimg{
+    width: 10rem;
+    height: 10rem;
+}
+.pillow{
+    width: 10rem;
+    height: 25rem;
+}
+#pillowimg{
+    width: 10rem;
+    height: 10rem;
+}
+.starLED{
+    width: 10rem;
+    height: 25rem;
+}
+#starLEDimg{
+    width: 10rem;
+    height: 10rem;
+}
+.painting{
+    width: 15rem;
+    height: 25rem;
+}
+#paintingimg{
+    width: 15rem;
+    height: 10rem;
+}
+.footercontent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#footerlink{
+    color: var(--color);
+    display: block;
+}
+footer{
+    background-color: var(--background-color);
+    width: 100%;
+    max-width: 100vw;
+    height: 6rem;
+    margin: 1rem;
+}
+.watch, .iphone, .headphones, .ipad, .speaker, .portablecharger,
+.windowAC, .bicycle, .led, .aiplants, .bulbstring, .wallart,
+.carpet, .pillow, .starLED, .painting {
+  background: white;
+  border-radius: 0.5rem;
+  /* overflow: hidden; */
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  /* text-align: center; */
+
+}
+
+#Spoilageheadig{
+    top: 0;
+    z-index: var(--layer-searchbar);
+    font-weight: bolder;
+    color: var(--color);
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list{
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+
+.sfeature{
+   
+    display: flex;
+     gap: 1rem;
+
+}
+#addsitem{
+    background-color: var(--sustainabilitybackground-color);
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 1px solid whitesmoke;
+}
+#addsitem:hover{
+    cursor: pointer;
+    transition: all;
+    transform: scale(1.1);
+    background-color: rgb(82, 245, 82);
+}
+
+#Spoilageserach{
+    border-radius: 10px;
+    border: 1px solid lightskyblue;
+
+
+}
+#spsearch{
+    background-color: var(--background-color);
+    color: white;
+       border-radius: 10px;
+}
+#spsearch:hover{
+    transition: all;
+    transform: scale(1.1);
+    background-color: var(--secondbackground-color);
+ 
+}
+#Spoilagetbl{
+    
+    border-spacing: 1rem;
+}
+#stblheading{
+        /* border: 1px solid rgb(72, 70, 70); */
+        padding: 1rem;
+        background-color: lightslategray;
+      
+}
+
+#risklevel{
+    
+    width: 4rem;
+    height: 2rem;
+    background-color: var(--sustainabilitybackground-color);
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+.useritem {
+    display: none;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 1rem;
+}
+
+.useritem.active {
+    display: flex;
+}
+
+@media (max-width:1200px) {
+
+    .pickupdelivery{
+        display: none;
+
+    }
+   #usersearch{
+    
+    width: 28rem;
+   }
+    
+}
+/* Responsive Changes */
+
+/* General Body Adjustments */
+body {
+    height: auto; /* Allow content to dictate height */
+}
+
+/* Search Bar */
+@media (max-width: 768px) {
+    .searchbar {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem 0.5rem;
+    }
+    #walmartlogo {
+        margin-bottom: 0.8rem;
+    }
+    .actualserach {
+        width: 100%;
+        margin-bottom: 0.8rem;
+    }
+    #usersearch {
+        width: calc(100% - 4rem); /* Account for search button */
+    }
+    .sign {
+        margin-bottom: 0.8rem;
+    }
+    #cartfig {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #usersearch {
+        width: calc(100% - 3.5rem);
+    }
+    #searchBtn {
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0.3rem;
+    }
+}
+
+/* Navigation Section */
+@media (max-width: 768px) {
+    .navsection {
+        flex-direction: column;
+        height: auto;
+        padding: 0.5rem 0;
+        position: static; /* Allow it to flow naturally */
+        top: auto;
+        margin-top: 0; /* Reset margin-top from fixed positioning */
+    }
+    .Dept {
+        margin-bottom: 0.5rem;
+        position: static; /* Allow it to flow naturally */
+    }
+    .navsection a {
+        padding: 0.5rem 0;
+        margin-bottom: 0.3rem;
+        text-align: center;
+    }
+    .Deptdrop {
+        position: static; /* Allow it to flow naturally */
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Hero Section */
+@media (max-width: 768px) {
+    .herosection {
+        margin-top: 0; /* Adjust margin-top as navsection is no longer fixed */
+    }
+    .sectionimages, .summersale {
+        max-width: 90%;
+        margin-left: 5%;
+    }
+    #sustainableimg, #saleimg {
+        height: 15rem; /* Adjust height for smaller screens */
+    }
+    #seemoresustainability, #salesee {
+        bottom: 50%; /* Adjust position */
+        left: 50%;
+        transform: translateX(-50%); /* Center horizontally */
+        width: 7rem;
+        height: 2.5rem;
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+    .prevnex {
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #sustabilitytitle, #saleheading {
+        font-size: 1.2rem;
+    }
+    #seemoresustainability, #salesee {
+        width: 6rem;
+        height: 2.2rem;
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Flash Deals and Home Decores Sections */
+@media (max-width: 1024px) {
+    .flashdeals, .homedecores {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 1.5rem; /* Add some gap between items */
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .watch, .iphone, .headphones, .ipad, .speaker, .portablecharger,
+    .windowAC, .bicycle, .led, .aiplants, .bulbstring, .wallart,
+    .carpet, .pillow, .starLED, .painting {
+        width: 45%; /* Two items per row */
+        height: auto; /* Allow height to adjust based on content */
+        margin-bottom: 1rem; /* Spacing between rows */
+    }
+    #smartwatchimg, #iphoneimg, #JBLheadphone, #ipadimg, #jblspeaker,
+    #portable, #acimg, #bicycleimg, #ledimg, #aiplantsimg, #bulbseries,
+    #wallimg, #carpetimg, #pillowimg, #starLEDimg, #paintingimg {
+        width: 100%; /* Make images fill their container */
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .watch, .iphone, .headphones, .ipad, .speaker, .portablecharger,
+    .windowAC, .bicycle, .led, .aiplants, .bulbstring, .wallart,
+    .carpet, .pillow, .starLED, .painting {
+        width: 90%; /* One item per row */
+        margin: 0 auto 1rem auto; /* Center and add bottom margin */
+    }
+}
+
+/* Footer */
+@media (max-width: 768px) {
+    footer {
+        height: auto;
+        padding: 1rem 0;
+        margin: 0; /* Remove margin */
+    }
+    .footercontent {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 1rem;
+    }
+    .infomation, .connect, div:nth-child(3), div:nth-child(4) {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Admin Section Specific Styles */
+@media (max-width: 768px) {
+    #Spoilageheadig {
+        font-size: 1.5rem;
+        padding: 0.8rem;
+    }
+    .list {
+        margin-top: 2rem;
+    }
+    .sfeature {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+    #addsitem, #Spoilageserach, #spsearch {
+        width: 80%;
+        margin-bottom: 0.5rem;
+    }
+    #Spoilagetbl {
+        width: 100%;
+        display: block; /* Allow horizontal scrolling */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent text wrapping in cells */
+        border-spacing: 0.5rem; /* Adjust spacing */
+    }
+    #stblheading {
+        padding: 0.8rem;
+    }
+    .useritem {
+        margin: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #Spoilagetbl th, #Spoilagetbl td {
+        padding: 0.5rem;
+    }
+}
